@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import axios from 'axios';
 import './App.css';
+//some random contribution. I may start to work in this tomorrow. I don't know how to use hooks yet, but I'll learn along the way.
+
+/* DOCUMENT THE CODEEE: Please add a brief commentary in whcih you specify what you're doing. As someone use to say... I'm no magician */
 
 function App() {
 
