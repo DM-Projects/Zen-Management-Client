@@ -1,41 +1,71 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
-import axios from 'axios';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {Text} from "./Components/Typography/Text";
+import CustomButton from  './Components/Button/Button';
+import Landing from './Routes/Landing';
+import { CustomContainer } from "./Components/HOC/Container/Container";
+import { Editor } from 'react-draft-wysiwyg';
+import draftToHtml from 'draftjs-to-html'
+import { EditorState, convertFromRaw, convertFromHTML} from 'draft-js';
+import { stateToHTML } from "draft-js-export-html";
+import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './App.css';
 
+// initializing the contentState
+let editorState = EditorState.createEmpty();
+
+export const CustomEditor = () => {
+
+    let [content, setContent] = useState(undefined);
+    let [textContent, setTextContent] = useState(undefined);
+    let [html, setHtml] = useState(undefined);
+
+    const onEditorStateChange = (editorState)=>{
+        console.log(editorState);
+    }
+
+    const onContentStateChange = (contentState)=>{
+        return setContent(contentState)
+    };
+
+    const convertToHtml = () => {
+
+        let html = draftToHtml(content);
+
+        return setHtml(html);
+    }
+
+    const getHtml = () => {
+        return html;
+    }
+
+    return (
+        <CustomContainer style={{maxWidth: "80vw"}}>
+            <CustomButton value={"Click me"} color={"primary"}/>
+            <Text/>
+            <Editor
+                wrapperClassName="wrapper-class"
+                editorClassName="editor-class"
+                toolbarClassName="toolbar-class"
+                onContentStateChange={onContentStateChange}
+            />
+            <button onClick={convertToHtml}>Convert from raw</button>
+            {html && (
+                <p dangerouslySetInnerHTML={{
+                    __html: getHtml(),
+                }}/>
+            )}
+        </CustomContainer>
+    )
+}
+
 function App() {
-
-    // eslint-disable-next-line
-  const [serverStatus, setServerStatus] = useState("WAITING");
-
-  useEffect(()=>{
-
-    axios.get("http://localhost:8000/api/v1/runtime").then((data)=>{
-      console.log(data);
-      setServerStatus(data.status)
-    }).catch((error)=>{
-        console.log(error);
-    })
-  })
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <h3>Server Status: {serverStatus.toString()}</h3>
-      </header>
-    </div>
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Landing />
+            </div>
+        </BrowserRouter>
   );
 }
 

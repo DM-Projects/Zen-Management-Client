@@ -1,0 +1,42 @@
+import React, {useEffect} from 'react';
+import { connect } from 'react-redux';
+import {actionCreators} from '../../Redux/Actions/Button';
+import store from "../../Redux/Store/store";
+import Button from '@material-ui/core/Button';
+
+const CustomButton = (props)=>{
+
+    const dispatchAction = () => {
+
+        props.dispatchAlert();
+    }
+
+    return (
+        <Button onClick={dispatchAction} variant={"contained"} color={props.color}>{props.value}</Button>
+    )
+}
+
+// mapStateToProps
+
+const mapStateToProps = (state, props) => {
+    return {
+        isClicked: state.isClicked
+    }
+}
+/**
+ *
+ * @param dispatch
+ * @param props
+ * @returns {{dispatchAlert: dispatchAlert}}
+ *
+ * @note Maybe refactor this function into a bindActionCreators
+ */
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        dispatchAlert: ()=> {
+            dispatch(actionCreators.alert());
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CustomButton);
