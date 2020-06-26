@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {Text} from "./Components/Typography/Text";
+import {Text} from "./Components/Typography/TitleText";
 import CustomButton from  './Components/Button/Button';
 import Landing from './Routes/Landing';
-import { CustomContainer } from "./Components/HOC/Container/Container";
+import CustomContainer from './Components/HOC/Container/index'
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html'
 import { EditorState, convertFromRaw, convertFromHTML} from 'draft-js';
@@ -40,9 +40,16 @@ export const CustomEditor = () => {
     }
 
     return (
-        <CustomContainer style={{maxWidth: "80vw"}}>
+        <CustomContainer>
             <CustomButton value={"Click me"} color={"primary"}/>
-            <Text/>
+            <Text type={"title"} padding={1}>
+                Hello
+                Hey
+                How
+                Are
+                You
+                ?
+            </Text>
             <Editor
                 wrapperClassName="wrapper-class"
                 editorClassName="editor-class"

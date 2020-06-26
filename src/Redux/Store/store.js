@@ -7,7 +7,8 @@ import buttonReducer from "../Reducers/Button/reducers";
  */
 let initialState = {
     isAuth: false,
-    user: {}
+    user: {},
+    layoutMode: "light"
 }
 
 const store = createStore(buttonReducer, initialState);
