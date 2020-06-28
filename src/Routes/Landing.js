@@ -14,4 +14,14 @@ const Landing = (props) => {
     )
 }
 
+const Home = (props) => {
+    return (
+        <React.Fragment>
+            <section className={"home_section"}>
+                <h1>Home</h1>
+            </section>
+        </React.Fragment>
+    )
+}
+
 export default Landing;
