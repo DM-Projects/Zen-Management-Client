@@ -1,7 +1,8 @@
 import React from "react";
 import {Switch, Route} from "react-router";
-import {CustomEditor} from '../App';
+import CustomEditor from '../Components/Editor/index';
 import Login from "../Components/Login";
+import Home from '../Components/Home/Home'
 const Landing = (props) => {
     return (
         <React.Fragment>

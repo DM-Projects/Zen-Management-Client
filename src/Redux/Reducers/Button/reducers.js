@@ -12,7 +12,6 @@ const buttonReducer = (state = initialState, action) => {
                 ...state,
                 isClicked: !state.isClicked
             }
-        break
 
         default:
             return state;

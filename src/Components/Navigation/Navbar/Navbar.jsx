@@ -4,12 +4,12 @@ import styled from 'styled-components'
 
 const Navbar = (props) => {
   return (
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Settings</li>
-        <li>Logout</li>
+    <nav className="navbar">
+      <ul className="navigation">
+        <li className="navigation-item">Home</li>
+        <li className="navigation-item">Projects</li>
+        <li className="navigation-item">Settings</li>
+        <li className="navigation-item">Logout</li>
       </ul>
     </nav>
   )

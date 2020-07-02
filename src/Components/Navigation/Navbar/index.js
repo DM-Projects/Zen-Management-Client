@@ -34,4 +34,11 @@ import { map } from 'lodash'
  * 
  * export default connect(mapStateToProps, mapDispatchToProps)(Login);
  */
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // logout: 
+  }
+}
+
  export default connect(mapStateToProps, null)(Navbar);

@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 
 const Text = ({type = "title", children, padding = 0, margin = 0, _styles = {}})=>{
-    console.log(children)
+    
     return (
         <React.Fragment>
             <Container maxwith={"sm"} style={

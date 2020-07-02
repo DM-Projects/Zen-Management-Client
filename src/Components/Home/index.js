@@ -1,20 +1,17 @@
-import CustomEditor from './Editor';
+import Home from './Home';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import { map } from 'lodash';
 
 const mapStateToProps = (state, props)=>{
   return {
     isAuth: state.isAuth,
-    user: state.user,
-    theme: state.layoutMode
+    user: state.user
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-
+  return {  
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CustomEditor);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
