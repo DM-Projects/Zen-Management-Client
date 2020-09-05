@@ -7,7 +7,7 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => (
     <Route
         {...rest}
         render={(props) =>
-            (auth && auth.role === "admin") || (auth && auth.role === "driver") ? (
+            (auth && auth.role === "admin") || (auth && auth.role === "user") ? (
                 <Component {...props} />
             ) : (
                 <Redirect to="/" />

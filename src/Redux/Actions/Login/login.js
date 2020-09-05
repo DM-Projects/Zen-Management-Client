@@ -33,7 +33,7 @@ export const createUserSession = (payload)=>{
     // localStorage.setItem("role", role);
 
     /**
-     * @note It seems to me like this method of removing the role from the local storage, is unsafe and ineficient
+     * @note It seems to me like this method of removing the role from the local storage is unsafe and inefficient
      * Try to use @param bcrypt to decode the token. 
      * Use redux to dispatch an action and make the state.role = dispatch(getCurrentRole(user))
      */
