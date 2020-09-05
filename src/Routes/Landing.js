@@ -15,7 +15,7 @@ const Landing = (props) => {
     )
 }
 
-const Home = (props) => {
+const _Home = (props) => {
     return (
         <React.Fragment>
             <section className={"home_section"}>
