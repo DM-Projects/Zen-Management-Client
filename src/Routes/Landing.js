@@ -8,8 +8,8 @@ const Landing = (props) => {
         <React.Fragment>
             <Switch>
                 <Route exact path={'/'} component={Home}/>
-                <Route exact path={'/login'} component={Login}/>
-                <Route exact path={'/editor'} component={CustomEditor}/>
+                <Route path={'/login'} component={Login}/>
+                <Route path={'/editor'} component={CustomEditor}/>
             </Switch>
         </React.Fragment>
     )
