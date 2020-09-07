@@ -1,28 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 .main_banner {
-    height: 100vh;
-    background: lightgoldenrodyellow;
-}
+  height: 100vh;
+  background: lightgoldenrodyellow; }
+  .main_banner_text {
+    padding-top: 10vh; }
+  .main_banner_title, .main_banner_subtitle {
+    font-size: 40px;
+    font-family: 'Lobster', cursive; }
+  .main_banner_title {
+    font-size: 4.5rem; }
+  .main_banner_subtitle {
+    font-size: 3rem; }
 
-
-.main_banner .main_banner_title,
-.main_banner .main_banner_subtitle {
-    font-family: 'Lobster', cursive;
-}
-
-.main_banner .main_banner_title {
-    padding-top: 5rem;
-    font-size: 4.5rem;
-}
-
-.main_banner .main_banner_subtitle {
-    padding-top: 2rem;
-    font-size: 3rem;
-}
+/*# sourceMappingURL=home.css.map */

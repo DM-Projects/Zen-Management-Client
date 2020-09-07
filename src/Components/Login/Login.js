@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Button from '@material-ui/core/Button'
-import './login.css'
+import './login.scss';
+
 const Login = (props) => {
 
     const [email, setEmail] = useState("");
@@ -24,8 +25,10 @@ const Login = (props) => {
             <section>
                 <form onSubmit={handleSubmit}>
                     <input type="email" name="email" id="email" className={"input"} onChange={onEmailChange}/>
+                    <label htmlFor="email">Email</label>
                     <input type="password" name="password" id="password" className={"input"} onChange={onPasswordChange}/>
-                    <Button variant={"contained"} color={"primary"} type="submit">Log in</Button>
+                    <label htmlFor="password">Password</label>
+                    <Button variant={"contained"} color={"primary"} type="submit" className={"submit_btn"}>Log in</Button>
                 </form>
             </section>
         </React.Fragment>

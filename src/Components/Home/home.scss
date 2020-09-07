@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$main-background: lightgoldenrodyellow;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main_banner {
+    height: 100vh;
+    background: $main-background;
+
+    &_text {
+        padding-top: 10vh;
+    }
+
+    &_title, &_subtitle {
+        font-size: 40px;
+        font-family: 'Lobster', cursive;
+    }
+
+    &_title {
+        font-size: 4.5rem;
+    }
+
+    &_subtitle {
+        font-size: 3rem;
+    }
+
+}
