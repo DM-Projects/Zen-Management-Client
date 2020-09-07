@@ -11,6 +11,10 @@ const CustomButton = (props)=>{
         props.dispatchAlert();
     }
 
+    useEffect(()=>{
+        console.log(`Props from <CustomButton/>: `, props);
+    })
+
     return (
         <Button onClick={dispatchAction} variant={"contained"} color={props.color}>{props.value}</Button>
     )
@@ -20,7 +24,8 @@ const CustomButton = (props)=>{
 
 const mapStateToProps = (state, props) => {
     return {
-        isClicked: state.isClicked
+        isClicked: state.isClicked,
+        layoutMode: state.layoutMode
     }
 }
 /**

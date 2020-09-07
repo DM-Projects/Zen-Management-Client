@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.main_banner {
+  height: 100vh;
+  background: lightgoldenrodyellow; }
+  .main_banner_text {
+    padding-top: 10vh; }
+  .main_banner_title, .main_banner_subtitle {
+    font-size: 40px;
+    font-family: 'Lobster', cursive; }
+  .main_banner_title {
+    font-size: 4.5rem; }
+  .main_banner_subtitle {
+    font-size: 3rem; }
+
+/*# sourceMappingURL=home.css.map */

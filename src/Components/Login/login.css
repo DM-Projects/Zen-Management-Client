@@ -1,0 +1,23 @@
+form {
+  margin: 10rem auto;
+  height: 100vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  form label {
+    font-size: 1.2rem;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    width: 90%;
+    text-align: left; }
+  form .input {
+    width: 20rem;
+    margin: 1em;
+    padding: .35em .4em;
+    border: 1.3px solid lightblue;
+    border-radius: .135rem; }
+  form .submit_btn {
+    display: block;
+    margin: 2rem auto; }
+
+/*# sourceMappingURL=login.css.map */

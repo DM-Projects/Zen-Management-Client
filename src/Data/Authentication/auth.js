@@ -3,8 +3,11 @@ import React from 'react';
 const authHeader = ()=>{
     let token = JSON.parse(localStorage.getItem('token'));
 
-    // validate token using bcrypt
-
+    /**
+     * @TODO Use bcrypt to validate the signature of this token
+     *
+     * If the @param {token} is not valid, and empty payload will be returned
+     */
     if(token){
         return {'Authorization': `Bearer ${token}`};
     } else return { }
