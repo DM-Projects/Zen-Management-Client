@@ -8,7 +8,7 @@ import { apiClient } from "../../../Data/apiClient";
  *
  * Now what's left to do is to connect the component that will make use of this action.
  *
- * Either use mapStateToProps and mapDispatchToProps to use the function without having to pass thru the props
+ * Either use mapStateToProps and mapDispatchToProps to use the function without having to pass props through
  *
  * Don't do props.register(payload).then(....)
  *

@@ -4,7 +4,7 @@ import {actionCreators} from '../../Redux/Actions/Button';
 import store from "../../Redux/Store/store";
 import Button from '@material-ui/core/Button';
 
-const CustomButton = (props)=>{
+const CustomButton = ({value, color})=>{
 
     const dispatchAction = () => {
 
@@ -12,11 +12,11 @@ const CustomButton = (props)=>{
     }
 
     useEffect(()=>{
-        console.log(`Props from <CustomButton/>: `, props);
+        // console.log(`Props from <CustomButton//>: `, props);
     })
 
     return (
-        <Button onClick={dispatchAction} variant={"contained"} color={props.color}>{props.value}</Button>
+        <Button onClick={dispatchAction} variant={"contained"} color={color}>{value}</Button>
     )
 }
 

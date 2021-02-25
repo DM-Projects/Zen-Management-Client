@@ -1,5 +1,5 @@
 import {createStore} from 'redux';
-import buttonReducer from "../Reducers/Button/reducers";
+import buttonReducer from "../Reducers/Button/button-reducer";
 
 /**
  * @TODO Combine the reducers in the future
@@ -10,6 +10,11 @@ let initialState = {
     user: {},
     layoutMode: "light"
 }
+
+/**
+ * @TODO Combine reducers before creating the global store.
+ * @type {Store<{isClicked}|*, Action>}
+ */
 
 const store = createStore(buttonReducer, initialState);
 
